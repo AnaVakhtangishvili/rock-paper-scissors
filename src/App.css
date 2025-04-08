@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.rules {
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 3rem;
+  background-color: #a29beaaa;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.rules:hover {
+  background-color: #fe6a68;
+  color: white;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button {
+  border: none;
+}
+
+.icon-button:hover {
+  background-color: #a29beaaa;
+  color: white;
+}
+
+.icon-button:focus {
+  background-color: #fe6a68;
+  color: white;
+  outline: none;
+}
+
+.game-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(54, 53, 53);
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.reset-button {
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.reset-button:hover {
+  background-color: #fe6a68;
+  color: white;
+}
+
+.reset-button:focus {
+  outline: none;
+}
+
+.move {
+  color: #5850a9aa;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.result {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fe6a68;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
