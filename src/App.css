@@ -55,6 +55,10 @@ button {
   margin: 2rem 0;
 }
 
+.score-box {
+  width: 20rem;
+}
+
 .score {
   font-size: 1.5rem;
   font-weight: bold;

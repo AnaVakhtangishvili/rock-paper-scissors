@@ -18,14 +18,14 @@ function RenderHeader({ score, reset }: HeaderProps) {
         Rules
       </a>
       <div className="score-container">
-        <div>
+        <div className="score-box">
           <h2>You</h2>
           <p className="score">{score.playerScore}</p>
         </div>
         <button className="reset-button" onClick={reset}>
           {determineWinner(score) ? "Play again" : "Reset score"}
         </button>
-        <div>
+        <div className="score-box">
           <h2>Computer</h2>
           <p className="score">{score.computerScore}</p>
         </div>
