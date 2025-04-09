@@ -2,10 +2,9 @@ import "./App.css";
 import { useState } from "react";
 import { RenderButtons } from "./components/buttons";
 import { Results } from "./components/results";
-import { buttonsConfig } from "./constants/buttons.config";
-import { chooseMove, finalResult } from "./helpers/choose-move";
+import { chooseMove, determineWinner } from "./helpers/choose-move";
 import { Button } from "./models/interface";
-import { Winners } from "./models/enums";
+import { Scores } from "./models/enums";
 import { RenderHeader } from "./components/header-and-scores";
 import { Winner } from "./components/winner";
 
@@ -15,7 +14,7 @@ function App() {
   const [playerMove, setPlayerMove] = useState("");
   const [computerMove, setComputerMove] = useState("");
   const [result, setResult] = useState("");
-  const gameOver = finalResult({ playerScore, computerScore });
+  const gameOver = determineWinner({ playerScore, computerScore });
 
   const chooseMoveHandler = (button: Button) => {
     const { playerMove, computerMove, result } = chooseMove(button);
@@ -23,9 +22,9 @@ function App() {
     setComputerMove(computerMove);
     setResult(result);
 
-    if (result === Winners.PLAYER) {
+    if (result === Scores.PLAYER) {
       countPlayerScore((prev) => prev + 1);
-    } else if (result === Winners.COMPUTER) {
+    } else if (result === Scores.COMPUTER) {
       countComputerScore((prev) => prev + 1);
     }
   };
@@ -45,7 +44,7 @@ function App() {
         <Winner score={{ playerScore, computerScore }} />
       ) : (
         <div>
-          <RenderButtons buttons={buttonsConfig} move={chooseMoveHandler} />
+          <RenderButtons move={chooseMoveHandler} />
           <Results
             results={{
               playerMove,

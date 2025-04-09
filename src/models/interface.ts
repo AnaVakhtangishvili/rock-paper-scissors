@@ -1,5 +1,7 @@
+import { Moves } from "./enums";
+
 export interface Button {
-  name: string;
+  name: Moves;
   value: number;
   image: string;
 }

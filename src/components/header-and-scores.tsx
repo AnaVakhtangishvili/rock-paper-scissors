@@ -1,4 +1,4 @@
-import { finalResult } from "../helpers/choose-move";
+import { determineWinner } from "../helpers/choose-move";
 import { Score } from "../models/interface";
 
 interface HeaderProps {
@@ -23,7 +23,7 @@ function RenderHeader({ score, reset }: HeaderProps) {
           <p className="score">{score.playerScore}</p>
         </div>
         <button className="reset-button" onClick={reset}>
-          {finalResult(score) ? "Play again" : "Reset score"}
+          {determineWinner(score) ? "Play again" : "Reset score"}
         </button>
         <div>
           <h2>Computer</h2>

@@ -1,11 +1,11 @@
 import { buttonsConfig, winningMoves } from "../constants/buttons.config";
-import { Winners } from "../models/enums";
+import { Moves, Scores, Winners } from "../models/enums";
 import { Button } from "../models/interface";
 
 function chooseMove(button: Button) {
   const playerMove = button.name;
   const computerMove = getRandomMove();
-  const result = determineWinner(playerMove, computerMove);
+  const result = determineScorer(playerMove, computerMove);
   return { playerMove, computerMove, result };
 }
 
@@ -14,20 +14,18 @@ function getRandomMove() {
   return buttonsConfig[randomIndex].name;
 }
 
-function determineWinner(playerMove: string, computerMove: string) {
+function determineScorer(playerMove: Moves, computerMove: Moves) {
   if (playerMove === computerMove) {
-    return Winners.TIE;
+    return Scores.TIE;
   }
-  if (
-    winningMoves[playerMove as keyof typeof winningMoves].includes(computerMove)
-  ) {
-    return Winners.PLAYER;
+  if (winningMoves[playerMove].includes(computerMove)) {
+    return Scores.PLAYER;
   } else {
-    return Winners.COMPUTER;
+    return Scores.COMPUTER;
   }
 }
 
-function finalResult(score: {
+function determineWinner(score: {
   playerScore: number;
   computerScore: number;
 }): string | undefined {
@@ -40,4 +38,4 @@ function finalResult(score: {
   }
 }
 
-export { chooseMove, finalResult };
+export { chooseMove, determineWinner };

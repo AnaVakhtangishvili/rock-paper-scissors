@@ -88,3 +88,10 @@ button {
   border-radius: 1rem;
   margin-top: 2rem;
 }
+
+.final-result {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fe6a68;
+  margin-top: 2rem;
+}

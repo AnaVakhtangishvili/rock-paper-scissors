@@ -4,21 +4,22 @@ import paper from "../assets/paper.png";
 import scissors from "../assets/scissors.png";
 import lizard from "../assets/lizard.png";
 import spock from "../assets/spock.png";
+import { Moves } from "../models/enums";
 
 const buttonsConfig: Button[] = [
-  { name: "Rock", value: 0, image: rock },
-  { name: "Paper", value: 1, image: paper },
-  { name: "Scissors", value: 2, image: scissors },
-  { name: "Lizard", value: 3, image: lizard },
-  { name: "Spock", value: 4, image: spock },
+  { name: Moves.ROCK, value: 0, image: rock },
+  { name: Moves.PAPER, value: 1, image: paper },
+  { name: Moves.SCISSORS, value: 2, image: scissors },
+  { name: Moves.LIZARD, value: 3, image: lizard },
+  { name: Moves.SPOCK, value: 4, image: spock },
 ];
 
 const winningMoves = {
-  Rock: ["Scissors", "Lizard"],
-  Paper: ["Rock", "Spock"],
-  Scissors: ["Paper", "Lizard"],
-  Lizard: ["Spock", "Paper"],
-  Spock: ["Scissors", "Rock"],
+  Rock: [Moves.SCISSORS, Moves.LIZARD],
+  Paper: [Moves.ROCK, Moves.SPOCK],
+  Scissors: [Moves.PAPER, Moves.LIZARD],
+  Lizard: [Moves.SPOCK, Moves.PAPER],
+  Spock: [Moves.SCISSORS, Moves.ROCK],
 };
 
 export { buttonsConfig, winningMoves };

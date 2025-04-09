@@ -1,14 +1,14 @@
+import { buttonsConfig } from "../constants/buttons.config";
 import { Button } from "../models/interface";
 
 interface ButtonProps {
-  buttons: Button[];
   move: (button: Button) => void;
 }
 
-function RenderButtons({ buttons, move }: ButtonProps) {
+function RenderButtons({ move }: ButtonProps) {
   return (
     <div className="buttons-container">
-      {buttons.map((button) => (
+      {buttonsConfig.map((button) => (
         <button
           className="icon-button"
           key={button.value}
