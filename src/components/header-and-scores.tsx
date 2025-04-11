@@ -1,3 +1,4 @@
+// *აქაც მსგავსი (კომოონენტის სახელი და ფაილის სახელი შევცვალოთ) რაც buttons.tsx-ში დაგიწერე
 import { determineWinner } from "../helpers/choose-move";
 import { Score } from "../models/interface";
 
@@ -23,6 +24,10 @@ function RenderHeader({ score, reset }: HeaderProps) {
           <p className="score">{score.playerScore}</p>
         </div>
         <button className="reset-button" onClick={reset}>
+          {/* მშობელში უკე ახდენ ამ ფუნქციის გამოძახებას,  ამ შემთხვევაში არ არი მძიმე კალკულაცია.
+              წარმოიდგინე რო ეს ფუნქცია აკეთებს რამე მძიმე კალკულაციას (დროში გაწელილს),  კიდევ აქ გამოძახება და გამოთვლა არ იქნება ოპტიმალური
+              შეგიძლია isOver={!!determineWinner(score)} პროპსი ჩამოაწოდო მშობლიდან
+          */}
           {determineWinner(score) ? "Play again" : "Reset score"}
         </button>
         <div className="score-box">
