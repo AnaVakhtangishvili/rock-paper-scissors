@@ -1,3 +1,5 @@
+// *აქაც /lib/config/*.ts იდეალური ადგილი იქნება სტატიკური კონფიგურაციისთვის
+
 import { Button } from "../models/interface";
 import rock from "../assets/rock.png";
 import paper from "../assets/paper.png";
