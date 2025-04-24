@@ -1,4 +1,3 @@
-// * /types/enums.ts უკეთესი იქნება
 export enum Winners {
   COMPUTER = "Computer wins!",
   PLAYER = "You win!",

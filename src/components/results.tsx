@@ -1,6 +1,4 @@
-// *აქაც მსგავსი (კომოონენტის სახელი და ფაილის სახელი შევცვალოთ) რაც buttons.tsx-ში დაგიწერე
-
-import { Result } from "../models/interface";
+import { Result } from "../types/types";
 
 interface ResultsProps {
   results: Result;

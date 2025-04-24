@@ -1,9 +1,6 @@
-// *ჰელფერ ფუნქციებს სად რომელ ფოლდერ / ფაილში აღწერ არ აქვს მნიშვნელობა
-// *ჯასთ /lib/helpers/*.ts იდეალური ადგილი იქნება, მარტივად კითხვადია ფოლდერ სტრუქქტურა ჩვენთვის
-
-import { buttonsConfig, winningMoves } from "../constants/buttons.config";
-import { Moves, Scores, Winners } from "../models/enums";
-import { Button } from "../models/interface";
+import { Moves, Scores, Winners } from "../../types/enums";
+import { Button } from "../../types/types";
+import { buttonsConfig, winningMoves } from "../config/buttons.config";
 
 function chooseMove(button: Button) {
   const playerMove = button.name;

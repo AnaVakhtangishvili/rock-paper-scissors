@@ -1,16 +1,11 @@
-// რეაქტი არ გვაძალებს ფაილის ან კომპონენტის სახელს რა უნდა ერქვას.
-// მაგრამ ჯობია რომ ფაილის სახელი იყოს შესაბამისი კომპონენტის სახელის
-// როცა აპლიკაცია იზრდება რთულია მოძებნო კონკრეტული კომპონენტი როცა სახელი არ ემთხვევა
-// კომპონენტის სახელი ჯობია ქემელქეისში იყოს ამ შემთხვევაში RenderButtons
-
-import { buttonsConfig } from "../constants/buttons.config";
-import { Button } from "../models/interface";
+import { buttonsConfig } from "../lib/config/buttons.config";
+import { Button } from "../types/types";
 
 interface ButtonProps {
   move: (button: Button) => void;
 }
 
-function RenderButtons({ move }: ButtonProps) {
+function Buttons({ move }: ButtonProps) {
   return (
     <div className="buttons-container">
       {buttonsConfig.map((button) => (
@@ -27,4 +22,4 @@ function RenderButtons({ move }: ButtonProps) {
   );
 }
 
-export { RenderButtons };
+export { Buttons };

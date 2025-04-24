@@ -1,12 +1,10 @@
-// *აქაც /lib/config/*.ts იდეალური ადგილი იქნება სტატიკური კონფიგურაციისთვის
-
-import { Button } from "../models/interface";
-import rock from "../assets/rock.png";
-import paper from "../assets/paper.png";
-import scissors from "../assets/scissors.png";
-import lizard from "../assets/lizard.png";
-import spock from "../assets/spock.png";
-import { Moves } from "../models/enums";
+import rock from "../../assets/rock.png";
+import paper from "../../assets/paper.png";
+import scissors from "../../assets/scissors.png";
+import lizard from "../../assets/lizard.png";
+import spock from "../../assets/spock.png";
+import { Button } from "../../types/types";
+import { Moves } from "../../types/enums";
 
 const buttonsConfig: Button[] = [
   { name: Moves.ROCK, value: 0, image: rock },
