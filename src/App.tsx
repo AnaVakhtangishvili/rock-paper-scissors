@@ -19,7 +19,11 @@ function App() {
 
   return (
     <div>
-      <Header score={{ playerScore, computerScore }} gameOver reset={reset} />
+      <Header
+        score={{ playerScore, computerScore }}
+        gameOver={!!gameOver}
+        reset={reset}
+      />
       {gameOver ? (
         <Winner winner={gameOver} />
       ) : (
