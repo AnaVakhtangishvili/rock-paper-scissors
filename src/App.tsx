@@ -2,8 +2,8 @@ import "./App.css";
 import { useGameState } from "./hooks/useGameState";
 import { Buttons } from "./components/Buttons";
 import { Results } from "./components/Results";
-import { Header } from "./components/Header";
 import { Winner } from "./components/Winner";
+import { Header } from "./components/Header";
 
 function App() {
   const {
