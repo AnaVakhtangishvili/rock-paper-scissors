@@ -1,11 +1,11 @@
-import { buttonsConfig } from "../constants/buttons.config";
-import { Button } from "../models/interface";
+import { buttonsConfig } from "../lib/config/buttons.config";
+import { Button } from "../types/types";
 
 interface ButtonProps {
   move: (button: Button) => void;
 }
 
-function RenderButtons({ move }: ButtonProps) {
+function Buttons({ move }: ButtonProps) {
   return (
     <div className="buttons-container">
       {buttonsConfig.map((button) => (
@@ -22,4 +22,4 @@ function RenderButtons({ move }: ButtonProps) {
   );
 }
 
-export { RenderButtons };
+export { Buttons };

@@ -1,6 +1,6 @@
-import { buttonsConfig, winningMoves } from "../constants/buttons.config";
-import { Moves, Scores, Winners } from "../models/enums";
-import { Button } from "../models/interface";
+import { Moves, Scores, Winners } from "../../types/enums";
+import { Button } from "../../types/types";
+import { buttonsConfig, winningMoves } from "../config/buttons.config";
 
 function chooseMove(button: Button) {
   const playerMove = button.name;

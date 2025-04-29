@@ -1,12 +1,12 @@
-import { determineWinner } from "../helpers/choose-move";
-import { Score } from "../models/interface";
+import { Score } from "../types/types";
 
 interface HeaderProps {
   score: Score;
+  gameOver: boolean;
   reset: () => void;
 }
 
-function RenderHeader({ score, reset }: HeaderProps) {
+function Header({ score, gameOver, reset }: HeaderProps) {
   return (
     <div>
       <h1>Rock Paper Scissors Lizard Spock</h1>
@@ -23,7 +23,7 @@ function RenderHeader({ score, reset }: HeaderProps) {
           <p className="score">{score.playerScore}</p>
         </div>
         <button className="reset-button" onClick={reset}>
-          {determineWinner(score) ? "Play again" : "Reset score"}
+          {gameOver ? "Play again" : "Reset score"}
         </button>
         <div className="score-box">
           <h2>Computer</h2>
@@ -34,4 +34,4 @@ function RenderHeader({ score, reset }: HeaderProps) {
   );
 }
 
-export { RenderHeader };
+export { Header };

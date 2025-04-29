@@ -1,4 +1,4 @@
-import { Result } from "../models/interface";
+import { Result } from "../types/types";
 
 interface ResultsProps {
   results: Result;
